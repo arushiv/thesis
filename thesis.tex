@@ -1,0 +1,305 @@
+\documentclass[reqno,12pt,oneside]{report} % right-side equation numbering, 12 point font, print one-sided 
+%\documentclass[reqno,12pt,twoside,openright]{report} % right-side equation numbering, 12 point font, print two-sided, Chapters start on odd pages. Rackham only accepts one-sided, so this is for personal printings.
+%\usepackage{quotchap}
+%\usepackage[allfiguresdraft]{draftfigure}
+
+  
+  
+  
+\usepackage[normalem]{ulem}
+
+
+
+\usepackage{rac}         % Use Rackham thesis style file
+\usepackage{aas_macros}  % To allow the reading of ADS journal references in the bibliography
+\usepackage[intlimits]{amsmath} % Puts the limits of integrals on top and bottom
+\usepackage{bm}
+\usepackage{amsxtra}     % Use various AMS packages
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}    % Add some packages for figures. Read epslatex.pdf on ctan.tug.org
+\usepackage{rotating}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{epsfig}
+\usepackage{subfigure}   % To make subfigures. Read subfigure.pdf on ctan.tug.org
+\usepackage{verbatim}
+\usepackage[square,numbers]{natbib}
+\usepackage[colorlinks]{hyperref}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\AtBeginDocument{
+\hypersetup{
+ % citecolor=[HTML]{800000},
+  citecolor=black,
+  linkcolor=black,
+  urlcolor=black}
+}
+%\usepackage[backend=biber, refsegment=chapter, defernumbers=true]{biblatex}
+%\usepackage[printonlyused]{acronym} % For the List of Abbreviations. Read acronym.pdf on ctan.tug.org
+\usepackage{enumitem}
+\newlength\myitemwidth
+
+\setlength\myitemwidth{5em} % <<< choose what you need here
+\newlist{myacronymlist}{description}{1}
+\setlist[myacronymlist]{
+  labelindent = 0pt ,
+  labelsep    = 0pt ,
+  leftmargin  = \myitemwidth ,
+  labelwidth  = \myitemwidth ,
+  itemindent  = 0pt ,
+  format      = \bfseries
+}
+
+\usepackage{acro}
+\DeclareAcroListStyle{myliststyle}{list}{
+  list = myacronymlist
+}
+\acsetup{ list-style = myliststyle }
+\usepackage{etoolbox}
+\usepackage{setspace}    % Allows you to specify the line spacing
+
+
+% uncomment following
+\doublespacing
+% comment following to 
+%\usepackage{comment}
+%\excludecomment{figure}
+%\let\endfigure\relax
+%\singlespacing         % \onehalfspacing for 1.5 spacing, \doublespacing for 2.0 spacing.
+%\onehalfspacing
+
+\newcommand{\sun}{\ensuremath{\odot}} % sun symbol is \sun
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{mgreen}{rgb}{0.0, 0.6, 0.0}
+
+
+\usepackage{hyperref}
+%\hypersetup{
+%    colorlinks,
+%    citecolor=black,
+%    filecolor=black,
+%    linkcolor=black,
+%    urlcolor=black
+%}
+% Various theorem environments. All of the following have the same numbering
+% system as theorem.
+
+\usepackage{algpseudocode}
+
+\usepackage{algpseudocode,algorithm,algorithmicx}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{introduction}[theorem]{Introduction}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\numberwithin{theorem}{chapter}     % Numbers theorems "x.y" where x
+                                    % is the section number, y is the
+                                    % theorem number
+
+%\renewcommand{\thetheorem}{\arabic{chapter}.\arabic{theorem}}
+
+%\makeatletter                      % This sequence of commands will
+%\let\c@equation\c@theorem          % incorporate equation numbering
+%\makeatother                       % into the theorem numbering scheme
+
+%\renewcommand{\theenumi}{(\roman{enumi})}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% If printing two-sided, this makes sure that any blank page at the 
+% end of a chapter will not have a page number. 
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+\hbox{}
+\thispagestyle{empty}
+\newpage
+\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%This command creates a box marked ``To Do'' around text.
+%To use type \todo{  insert text here  }.
+
+\newcommand{\todo}[1]{\vspace{5 mm}\par \noindent
+\marginpar{\textsc{To Do}}
+\framebox{\begin{minipage}[c]{0.95 \textwidth}
+\tt\begin{center} #1 \end{center}\end{minipage}}\vspace{5 mm}\par}
+
+
+\usepackage{tikz}% for NN diagram
+\usepackage{lineno}
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+\input{definitions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{sectsty}
+%\usepackage{titlecaps}
+%\allsectionsfont{\titlecap}
+
+
+%\usepackage{relsize}
+
+%\acsetup{short-format=\textsmaller}
+\input{abbr}
+\newcommand{\acli}[1]{\acl{#1} (\acs{#1})}
+\newcommand{\Acli}[1]{\Acl{#1} (\acs{#1})}
+\newcommand{\aclpi}[1]{\aclp{#1} (\acs{#1})}
+\newcommand{\Aclpi}[1]{\Aclp{#1} (\acs{#1})}
+
+%\usepackage{quotchap}
+\begin{document}
+
+\bibliographystyle{agu04}    % Set the bibliography style. agu04, plain, alpha, etc.
+% Title page as required by Rackham dissertation guidelines
+%\input{log.tex}
+%\clearpage
+%\usefont{T1}{qzc}{m}{it}
+\newcommand{\thesistitle}{Understanding the genetics of gene regulation using integrative analyses of large multi-omics datasets}
+\titlepage{\thesistitle}{Arushi Varshney}{Doctor of Philosophy}
+{Human Genetics}{2019}
+{Assistant Professor Stephen C. J. Parker, Chair\\
+ Professor Sally A. Camper\\
+ Assistant Professor Jacob Kitzman\\
+ Associate Professor Mats Ljungman\\
+ Associate Professor Cristen J. Willer\\
+ }
+% Begin the front matter as required by Rackham dissertation guidelines
+
+
+\initializefrontsections
+
+% Optional Frontispiece
+\frontispiece{}
+
+% Optional, but recommended, Copyright page
+\copyrightpage{Arushi Varshney}
+
+% Page numbering. If you don't include a frontispiece or copyright page, you'll need to change this for two-sided printing.
+\makeatletter
+\if@twoside \setcounter{page}{4} \else \setcounter{page}{1} \fi
+\makeatother
+ 
+% Optional Dedication page
+\dedicationpage{To my family}
+
+% Optional Acknowledgements page
+\startacknowledgementspage
+\input{acknowledgements}
+\label{acknowledgements}
+
+% Optional Preface page
+%\startprefacepage
+%\input{Preface}
+%\label{Preface}
+% Table of contents, list of figures, etc.
+\tableofcontents     % Required
+\listoftables        % Required if there is more than one table
+\listoffigures       % Required if there is more than one figure
+%\listofmaps          % Required if there is more than one map
+% \listofappendices    % Required if there is more than one appendix
+\listofabbreviations % Optional. Abbreviations should be stored in a file named abbr.tex
+
+% Optional in-dissertation Abstract Page
+\startabstractpage
+{\thesistitle}{Arushi Varshney}{Chair: Stephen C. J. Parker}
+\input{abstract/main}
+\label{abstract}
+
+\startthechapters 
+% The individual files for each of the chapters are put here.
+% Save each chapter of your thesis to a seperate tex file
+% and then use the \input command to include this file in your
+% thesis.  For instance you can save a file to "intro.tex" and 
+% then type \input{intro}. 
+% \linenumbers
+%\chapter{Introduction}
+%\label{chap:intro}
+%\input{introduction/main}
+
+
+\chapter{Cell specificity of human regulatory annotations and their genetic effects on gene expression}
+\label{chap:2_regulatory_elements}
+\input{2_regulatory_elements/main}
+
+
+\chapter{Understanding the genetics of gene expression in human pancreatic islets}
+\label{chap:3_islet_eqtl}
+\input{3_islet_eqtl/main}
+
+
+%\chapter{Understanding the genetics of gene expression in human pancreatic islets}
+%\label{chap:4_islet_eqtl}
+%\input{4_islet_eqtl/main}
+
+\chapter{Enhancer RNA expression as another layer of regulatory control}
+\label{chap:cc}
+\input{curved_channel/main}
+
+%\chapter{Application to Adverse Pressure Gradient Flows}
+%\label{chap:bump}
+%\input{bump/main}
+ 
+%\chapter{Application to Separated Flows over Airfoils}
+%\label{chap:airfoil}
+%\input{airfoil/main}
+
+%
+% \chapter{Application to a Non Turbulence Problem}
+% \label{chap:non_turbulence}
+% \input{non_turbulence/main}
+%
+%
+% 
+\chapter{Conclusions and Future Work}
+\label{chap:conclusion}
+\input{conclusion/main}
+ 
+
+\startappendices
+%\appendix
+\input{appendices/models.tex}
+%\input{appendices/filtering.tex}
+%\input{appendices/shocks.tex}
+ 
+\startbibliography
+ \begin{singlespace} % Bibliography must be single spaced
+% \bibliography{formulation/main.bib,eq/main.bib,curved_channel/main.bib,introduction/main.bib,airfoil/main.bib,bump/main.bib,appendices/main.bib}
+ \bibliography{full.bib}
+ \end{singlespace}
+
+% An external Abstract that can be printed at the end of the document, 
+% for separate submission to Rackham. Comment it out when not needed. - jg
+%\startextabstractpage
+%{The Title of Your Dissertation}{Your Name}{Chair: Albert Einstein}
+%\input{Abstract/Abstract}
+%\label{ExtAbstract}
+
+\end{document}
