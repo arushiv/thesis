@@ -3,9 +3,10 @@
 %\usepackage{quotchap}
 %\usepackage[allfiguresdraft]{draftfigure}
 
-  
-  
-  
+% wrapping URLs
+\RequirePackage[hyphens]{url}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}  
+
 \usepackage[normalem]{ulem}
 
 
@@ -36,6 +37,7 @@
   linkcolor=black,
   urlcolor=black}
 }
+
 %\usepackage[backend=biber, refsegment=chapter, defernumbers=true]{biblatex}
 %\usepackage[printonlyused]{acronym} % For the List of Abbreviations. Read acronym.pdf on ctan.tug.org
 \usepackage{enumitem}
@@ -182,7 +184,7 @@
 %\input{log.tex}
 %\clearpage
 %\usefont{T1}{qzc}{m}{it}
-\newcommand{\thesistitle}{Understanding the genetics of gene regulation using integrative analyses of large multi-omics datasets}
+\newcommand{\thesistitle}{Understanding the genetics of gene regulation using multi-omics profiling}
 \titlepage{\thesistitle}{Arushi Varshney}{Doctor of Philosophy}
 {Human Genetics}{2019}
 {Assistant Professor Stephen C. J. Parker, Chair\\
@@ -212,8 +214,8 @@
 
 % Optional Acknowledgements page
 \startacknowledgementspage
-\input{acknowledgements}
-\label{acknowledgements}
+%\input{acknowledgements}
+%\label{acknowledgements}
 
 % Optional Preface page
 %\startprefacepage
@@ -240,9 +242,10 @@
 % thesis.  For instance you can save a file to "intro.tex" and 
 % then type \input{intro}. 
 % \linenumbers
-%\chapter{Introduction}
-%\label{chap:intro}
-%\input{introduction/main}
+
+\chapter{Introduction}
+\label{chap:intro}
+\input{1_introduction/main}
 
 
 \chapter{Cell specificity of human regulatory annotations and their genetic effects on gene expression}
@@ -255,44 +258,32 @@
 \input{3_islet_eqtl/main}
 
 
-%\chapter{Understanding the genetics of gene expression in human pancreatic islets}
-%\label{chap:4_islet_eqtl}
-%\input{4_islet_eqtl/main}
+\chapter{Analyses of Islet eQTL and T2D GWAS along with epigenomic data to elucidate gene regulatory mechanisms}
+\label{chap:4_inspire}
+\input{4_inspire/main}
 
-\chapter{Enhancer RNA expression as another layer of regulatory control}
+
+\chapter{Integrating Enhancer RNA Signatures with Diverse Omics Data to identify characteristics of transcription initiation in pancreatic islets}
 \label{chap:cc}
-\input{curved_channel/main}
+\input{5_cage/main}
 
-%\chapter{Application to Adverse Pressure Gradient Flows}
-%\label{chap:bump}
-%\input{bump/main}
- 
-%\chapter{Application to Separated Flows over Airfoils}
-%\label{chap:airfoil}
-%\input{airfoil/main}
 
-%
-% \chapter{Application to a Non Turbulence Problem}
-% \label{chap:non_turbulence}
-% \input{non_turbulence/main}
-%
-%
-% 
-\chapter{Conclusions and Future Work}
+\chapter{Implications and Future Work}
 \label{chap:conclusion}
-\input{conclusion/main}
+\input{6_future_directions/main}
  
 
-\startappendices
+%\startappendices
 %\appendix
-\input{appendices/models.tex}
+%\input{appendices/models.tex}
 %\input{appendices/filtering.tex}
 %\input{appendices/shocks.tex}
  
 \startbibliography
  \begin{singlespace} % Bibliography must be single spaced
 % \bibliography{formulation/main.bib,eq/main.bib,curved_channel/main.bib,introduction/main.bib,airfoil/main.bib,bump/main.bib,appendices/main.bib}
- \bibliography{full.bib}
+\bibliographystyle{unsrt}
+ \bibliography{bibliography}
  \end{singlespace}
 
 % An external Abstract that can be printed at the end of the document, 
