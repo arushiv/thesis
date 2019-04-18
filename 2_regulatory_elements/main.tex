@@ -6,8 +6,8 @@ Genome-wide association studies (GWAS) have shown that most of the genetic varia
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig1.pdf}
-    \caption{Description of the regulatory annotation calling procedures. A: Super/typical enhancers are called by using the H3K27ac mark ChIP-seq to assign enhancer elements, stitching elements within 12.5 kb and ranking the stitched segments based on H3K27ac levels. B: Stretch enhancer calling procedure involves analyzing patterns of multiple histone marks, assigning chromatin state segmentations using ChromHMM, followed by identifying contiguous enhancer chromatin state segments longer than 3 kb. C: HOT regions are defined as regions with higher transcription factor binding occupancies than expected. D: Broad domains are defined as the top 5\% of the H3K4me3 ChIP-seq peaks by length.}
+    \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig1.png}
+    \caption[Description of the regulatory annotation calling procedures]{Description of the regulatory annotation calling procedures. A: Super/typical enhancers are called by using the H3K27ac mark ChIP-seq to assign enhancer elements, stitching elements within 12.5 kb and ranking the stitched segments based on H3K27ac levels. B: Stretch enhancer calling procedure involves analyzing patterns of multiple histone marks, assigning chromatin state segmentations using ChromHMM, followed by identifying contiguous enhancer chromatin state segments longer than 3 kb. C: HOT regions are defined as regions with higher transcription factor binding occupancies than expected. D: Broad domains are defined as the top 5\% of the H3K4me3 ChIP-seq peaks by length.}
     \label{fig:c1_f1}
 \end{figure}
 
@@ -27,8 +27,8 @@ To catalogue super, typical, stretch enhancers, HOT regions and broad domains re
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig2.pdf}
-    \caption{Summary statistics and overlaps demonstrate differences in characteristics of regulatory annotations. For each annotation in each cell type considered, shown are number of annotation segments (A), length distribution of segment annotations (B) and percent genomic coverage (C). Jaccard statistic (base-pair level intersection/union) between each pair of annotations is shown within a cell type (D) and across cell types (E).}
+    \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig2.png}
+    \caption[Summary statistics and overlaps demonstrate differences in characteristics of regulatory annotations]{Summary statistics and overlaps demonstrate differences in characteristics of regulatory annotations. For each annotation in each cell type considered, shown are number of annotation segments (A), length distribution of segment annotations (B) and percent genomic coverage (C). Jaccard statistic (base-pair level intersection/union) between each pair of annotations is shown within a cell type (D) and across cell types (E).}
     \label{fig:c1_f2}
 \end{figure}
 
@@ -37,7 +37,7 @@ Next, we calculated the fraction of overlap between all pairs of regulatory anno
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig_s1.png}
-    \caption{Log\textsubscript{2}(Fold enrichment) for overlap between each pair of regulatory annotations is shown. Enrichments calculated using GAT [46]. Gray=Not significant after Bonferroni correction. Super and typical enhancers in the same cell type are strongly depleted for overlap since these are disjoint sets. Black tiles on the diagonal represent same cell type and regulatory annotation in the pair.}
+    \caption[Overlap enrichment between pairs of regulatory annotations]{Log\textsubscript{2}(Fold enrichment) for overlap between each pair of regulatory annotations is shown. Enrichments calculated using GAT [46]. Gray=Not significant after Bonferroni correction. Super and typical enhancers in the same cell type are strongly depleted for overlap since these are disjoint sets. Black tiles on the diagonal represent same cell type and regulatory annotation in the pair.}
     \label{fig:c1_fs1}
 \end{figure}
 
@@ -48,7 +48,7 @@ Most regulatory annotations are defined using histone modification ChIP-seq prof
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig_s2.png}
-    \caption{Fraction of annotations overlapped by chromatin states. Overlap fractions of each annotation (facet columns) defined in each cell type (facet rows) with chromatin states defined in each cell type (X- axis) is shown. Stretch enhancers were defined using the same chromatin state model for the corresponding cell types.}
+    \caption[Fraction of annotations overlapped by chromatin states]{Fraction of annotations overlapped by chromatin states. Overlap fractions of each annotation (facet columns) defined in each cell type (facet rows) with chromatin states defined in each cell type (X- axis) is shown. Stretch enhancers were defined using the same chromatin state model for the corresponding cell types.}
     \label{fig:c1_fs2}
 \end{figure}
 
@@ -57,21 +57,21 @@ We then sought to quantify the cell type-specificity of enhancer and promoter ch
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig_s3.png}
-    \caption{Enhancer chromatin state information content for annotations. Average posterior probability for an annotation segment to be called an enhancer chromatin state vs the information content of that feature in the each cell type (facet rows).}
+    \caption[Enhancer chromatin state information content for annotations]{Enhancer chromatin state information content for annotations. Average posterior probability for an annotation segment to be called an enhancer chromatin state vs the information content of that feature in the each cell type (facet rows).}
     \label{fig:c1_fs3}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig3.pdf}
-    \caption{Enhancer and promoter chromatin state information content shows cell type-specificity of regulatory annotations. Average posterior probability for an annotation segment to be called an enhancer (A) or promoter (B) chromatin state vs the information content of that feature in the GM12878 cell type calculated by comparing average posterior probabilities across the four cell types.}
+    \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig3.png}
+    \caption[Enhancer and promoter chromatin state information content shows cell type-specificity of regulatory annotations]{Enhancer and promoter chromatin state information content shows cell type-specificity of regulatory annotations. Average posterior probability for an annotation segment to be called an enhancer (A) or promoter (B) chromatin state vs the information content of that feature in the GM12878 cell type calculated by comparing average posterior probabilities across the four cell types.}
     \label{fig:c1_f3}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig_s4.png}
-    \caption{Promoter chromatin state information content for annotations. Average posterior probability for an annotation segment to be called an promoter chromatin state vs the information content of that feature in the each cell type (facet rows).}
+    \caption[Promoter chromatin state information content for annotations]{Promoter chromatin state information content for annotations. Average posterior probability for an annotation segment to be called an promoter chromatin state vs the information content of that feature in the each cell type (facet rows).}
     \label{fig:c1_fs4}
 \end{figure}
 
@@ -82,21 +82,21 @@ We next assessed the gene regulatory potential for these annotations using sever
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig_s5.png}
-    \caption{Enrichment for annotations in GM12878 and HepG2 to overlap GWAS loci for different traits. Red line = Bonferroni multiple testing correction threshold. Gray = not significant after Bonferroni correction. Annotations overlapping at least 3 GWAS loci for a trait are shown in each panel.}
+    \caption[Enrichment for annotations in GM12878 and HepG2 to overlap GWAS loci for different traits]{Enrichment for annotations in GM12878 and HepG2 to overlap GWAS loci for different traits. Red line = Bonferroni multiple testing correction threshold. Gray = not significant after Bonferroni correction. Annotations overlapping at least 3 GWAS loci for a trait are shown in each panel.}
     \label{fig:c1_fs5}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig_s6.png}
-    \caption{Cumulative distribution for distance to nearest TSS (all Gencode V19 protein coding genes) for segments in each regulatory annotation in each cell type.}
+    \caption[Cumulative distribution for distance to nearest TSS (all Gencode V19 protein coding genes) for segments in each regulatory annotation in each cell type]{Cumulative distribution for distance to nearest TSS (all Gencode V19 protein coding genes) for segments in each regulatory annotation in each cell type.}
     \label{fig:c1_fs6}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig_s7.png}
-    \caption{Enrichment of regulatory annotations in four cell types to overlap with LCL eQTL (GTEx v7). Fold enrichments are shown in A, -log\textsubscript{10}(p values) are shown in B. Enrichment p values significant after a Bonferroni correction for 20 tests are marked with ‘*’.}
+    \caption[Enrichment of regulatory annotations in four cell types to overlap with LCL eQTL (GTEx v7)]{Enrichment of regulatory annotations in four cell types to overlap with LCL eQTL (GTEx v7). Fold enrichments are shown in A, -log\textsubscript{10}(p values) are shown in B. Enrichment p values significant after a Bonferroni correction for 20 tests are marked with ‘*’.}
     \label{fig:c1_fs7}
 \end{figure}
 
@@ -105,26 +105,26 @@ We hypothesized that significant enrichment of LCL eQTLs in regulatory annotatio
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{2_regulatory_elements/figures/fig_s8.png}
-    \caption{Gene expression specificity index in lymphoblastoid cell line (LCL-ESI). A: Distribution of LCL-ESI for protein coding genes with median transcripts per million (TPM) $>=$ 0.15 in LCL. Colors indicate equal sized binning of the genes into quintiles by LCL-ESI. Each bin contained 2753 protein coding genes. B: Median TPM for genes in each LCL-ESI quintile bin across the 50 GTEx tissues analyzed. Lymphoblastoid cell line (LCL) is named as ‘Cells-EBV-transformed lymphocytes’ in the GTEx dataset.}
+    \caption[Gene expression specificity index in lymphoblastoid cell line (LCL-ESI)]{Gene expression specificity index in lymphoblastoid cell line (LCL-ESI). A: Distribution of LCL-ESI for protein coding genes with median transcripts per million (TPM) $>=$ 0.15 in LCL. Colors indicate equal sized binning of the genes into quintiles by LCL-ESI. Each bin contained 2753 protein coding genes. B: Median TPM for genes in each LCL-ESI quintile bin across the 50 GTEx tissues analyzed. Lymphoblastoid cell line (LCL) is named as ‘Cells-EBV-transformed lymphocytes’ in the GTEx dataset.}
     \label{fig:c1_fs8}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig_s9.png}
-    \caption{Cumulative distribution for distance to nearest TSS (Gencode V19 protein coding genes binned by LCL-ESI, 2753 genes in each bin) for regulatory annotations in GM12878. Black curves represent 10,000 random sub-samplings of 2753 genes from across the five bins.}
+    \caption[Cumulative distribution for distance to nearest TSS for regulatory annotations in GM12878]{Cumulative distribution for distance to nearest TSS (Gencode V19 protein coding genes binned by LCL-ESI, 2753 genes in each bin) for regulatory annotations in GM12878. Black curves represent 10,000 random sub-samplings of 2753 genes from across the five bins.}
     \label{fig:c1_fs9}
 \end{figure}
 
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig4.pdf}
-    \caption{Proximity to protein coding genes and enrichment for eQTL highlight functions of regulatory annotations. A: Enrichment for regulatory annotation elements in GM12878 to lie within distances (x-axis) of transcription start site (TSS) of protein coding genes binned by gene expression specificity in lymphoblast cell lines (LCL-ESI). Enrichment calculated in comparison to 10,000 random samplings, 95\% confidence intervals shown. B: Pearson correlation of LCL-ESI gene quintile bin numbers (increasing LCL specificity) with the fold enrichment of eQTLs of these genes in regulatory annotations. Positive correlation shows that the eQTLs for more LCL specific genes are more enriched in annotations. Significant (p $<$ 0.05) correlations are marked with a ‘*’.}
+    \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig4.png}
+    \caption[Proximity to protein coding genes and enrichment for eQTL highlight functions of regulatory annotations]{Proximity to protein coding genes and enrichment for eQTL highlight functions of regulatory annotations. A: Enrichment for regulatory annotation elements in GM12878 to lie within distances (x-axis) of transcription start site (TSS) of protein coding genes binned by gene expression specificity in lymphoblast cell lines (LCL-ESI). Enrichment calculated in comparison to 10,000 random samplings, 95\% confidence intervals shown. B: Pearson correlation of LCL-ESI gene quintile bin numbers (increasing LCL specificity) with the fold enrichment of eQTLs of these genes in regulatory annotations. Positive correlation shows that the eQTLs for more LCL specific genes are more enriched in annotations. Significant (p $<$ 0.05) correlations are marked with a ‘*’.}
     \label{fig:c1_f4}
 \end{figure}
-
-We next asked which regulatory annotations were more enriched to overlap eQTL of more cell type-specific genes. We obtained sets of LCL eQTL \cite{gtexconsortiumGeneticEffectsGene2017} for genes in each LCL-ESI bin and calculated the enrichment of each eQTL set in the regulatory annotations. Indeed, we observe that GM12878 regulatory annotations were increasingly enriched to overlap eQTLs for highly LCL specific genes (Fig. \ref{fig:c1_fs10}) and the fold enrichment for eQTLs in a bin is positively correlated with the LCL-ESI bin number (Fig. \ref{fig:c1_f4}B, GM12878 facet). Notably, stretch enhancers, and in some instances typical enhancers, in non-LCL cell types showed strong negative correlations of LCL eQTL fold enrichment with LCL-ESI bin number (Fig. \ref{fig:c1_f4}B), indicating higher cell type-specificity for stretch enhancers. This is consistent with the previous histone modification based chromatin state analyses (Fig. \ref{fig:c1_f3}, Figs. \ref{fig:c1_fs2, fig:c1_fs3, fig:c1_fs4, fig:c1_fs5}), which also highlight the cell type-specificity of stretch enhancers. HOT regions in non-LCL cell types show high enrichments for eQTLs in less cell type-specific LCL-ESI bins 1-3 (Fig. \ref{fig:c1_fs10}). This analysis shows that high enrichments of LCL eQTLs in non-LCL annotations (Fig. \ref{fig:c1_fs7}) was driven by eQTLs for more ubiquitously expressed genes. These analyses further emphasize the differences in the cell type-specificities of these regulatory annotations.\\
+<
+We next asked which regulatory annotations were more enriched to overlap eQTL of more cell type-specific genes. We obtained sets of LCL eQTL \cite{gtexconsortiumGeneticEffectsGene2017} for genes in each LCL-ESI bin and calculated the enrichment of each eQTL set in the regulatory annotations. Indeed, we observe that GM12878 regulatory annotations were increasingly enriched to overlap eQTLs for highly LCL specific genes (Fig. \ref{fig:c1_fs10}) and the fold enrichment for eQTLs in a bin is positively correlated with the LCL-ESI bin number (Fig. \ref{fig:c1_f4}B, GM12878 facet). Notably, stretch enhancers, and in some instances typical enhancers, in non-LCL cell types showed strong negative correlations of LCL eQTL fold enrichment with LCL-ESI bin number (Fig. \ref{fig:c1_f4}B), indicating higher cell type-specificity for stretch enhancers. This is consistent with the previous histone modification based chromatin state analyses (Fig. \ref{fig:c1_f3}, Figs. \ref{fig:c1_fs2}, \ref{fig:c1_fs3}, \ref{fig:c1_fs4}, \ref{fig:c1_fs5}), which also highlight the cell type-specificity of stretch enhancers. HOT regions in non-LCL cell types show high enrichments for eQTLs in less cell type-specific LCL-ESI bins 1-3 (Fig. \ref{fig:c1_fs10}). This analysis shows that high enrichments of LCL eQTLs in non-LCL annotations (Fig. \ref{fig:c1_fs7}) was driven by eQTLs for more ubiquitously expressed genes. These analyses further emphasize the differences in the cell type-specificities of these regulatory annotations.\\
 
 \begin{figure}
     \centering
@@ -134,19 +134,19 @@ We next asked which regulatory annotations were more enriched to overlap eQTL of
 \end{figure}
 
 \subsection{Patterns of expression and chromatin QTL effect sizes in annotations suggest regulatory buffering}
-While enriched overlap with eQTLs demonstrates genetic regulatory potential for each annotation (Figs. \ref{fig:c1_fs7, fig:c1_fs10, fig:c1_f4}B), this analysis does not distinguish the strength of these genetic effects on gene expression. To understand this, we compared the absolute effect sizes (beta values from the linear regression models) of LCL eQTLs overlapping different GM12878 regulatory annotations. We excluded SNPs with minor allele frequency (MAF) $<$ 0.2, since these SNPs have substantially reduced statistical power and are therefore biased to be detected as eQTL only with higher effect sizes (Fig. \ref{fig:c1_fs11}). We observed that LCL eQTLs in GM12878 stretch enhancers have nominally significantly lower (p=0.032) effect sizes than GM12878 HOT regions, however this comparison does not survive a Bonferroni correction accounting for 10 pairwise tests (Fig. \ref{c1_fs12}A). To achieve higher power for such an analysis, we utilized the larger GTEx blood eQTL dataset and compared effect sizes in annotations of the blood relevant leukemia cell line K562. Consistent with the LCL analysis, we observed that effect sizes of blood eQTL in K562 stretch enhancers were significantly lower than that of HOT regions (Bonferroni corrected p = 0.0082, Fig. \ref{fig:c1_f5}A). We note that the differences in effect sizes for LCL and blood eQTL are largely due to different sample sizes and therefore power to detect eQTL. To further control for potential sources of bias in this analysis, we next asked if this effect size difference was driven by distance to the eQTL target gene’s TSS or the number of SNPs in high linkage disequilibrium (LD) with the index eQTL SNP. We modeled the eQTL absolute effect size using linear regression including these additional two covariates along with an indicator variable encoding stretch enhancer or HOT region annotation (eQTL overlapping both annotations were not considered). We observed a significant effect on the indicator variable (p = 0.005, regression coefficient = -0.0521, Table S1), which confirms the smaller effect size of eQTL in stretch enhancers, independent of TSS distance and LD structure. \\
+While enriched overlap with eQTLs demonstrates genetic regulatory potential for each annotation (Figs. \ref{fig:c1_fs7}, \ref{fig:c1_fs10}, \ref{fig:c1_f4}B), this analysis does not distinguish the strength of these genetic effects on gene expression. To understand this, we compared the absolute effect sizes (beta values from the linear regression models) of LCL eQTLs overlapping different GM12878 regulatory annotations. We excluded SNPs with minor allele frequency (MAF) $<$ 0.2, since these SNPs have substantially reduced statistical power and are therefore biased to be detected as eQTL only with higher effect sizes (Fig. \ref{fig:c1_fs11}). We observed that LCL eQTLs in GM12878 stretch enhancers have nominally significantly lower (p=0.032) effect sizes than GM12878 HOT regions, however this comparison does not survive a Bonferroni correction accounting for 10 pairwise tests (Fig. \ref{fig:c1_fs12}A). To achieve higher power for such an analysis, we utilized the larger GTEx blood eQTL dataset and compared effect sizes in annotations of the blood relevant leukemia cell line K562. Consistent with the LCL analysis, we observed that effect sizes of blood eQTL in K562 stretch enhancers were significantly lower than that of HOT regions (Bonferroni corrected p = 0.0082, Fig. \ref{fig:c1_f5}A). We note that the differences in effect sizes for LCL and blood eQTL are largely due to different sample sizes and therefore power to detect eQTL. To further control for potential sources of bias in this analysis, we next asked if this effect size difference was driven by distance to the eQTL target gene’s TSS or the number of SNPs in high linkage disequilibrium (LD) with the index eQTL SNP. We modeled the eQTL absolute effect size using linear regression including these additional two covariates along with an indicator variable encoding stretch enhancer or HOT region annotation (eQTL overlapping both annotations were not considered). We observed a significant effect on the indicator variable (p = 0.005, regression coefficient = -0.0521, Table S1), which confirms the smaller effect size of eQTL in stretch enhancers, independent of TSS distance and LD structure. \\
 
 \begin{figure}
     \centering
     \includegraphics[width=.7\textwidth]{2_regulatory_elements/figures/fig_s11.png}
-    \caption{Lower minor allele frequency (MAF) variants have higher eQTL effect sizes. A: Distribution of MAF for LCL eQTL (GTEx v7, 10\% FDR). B: LCL eQTL absolute effect size (slope of the linear regression) vs minor allele frequency (MAF).}
+    \caption[Lower minor allele frequency (MAF) variants have higher eQTL effect sizes]{Lower minor allele frequency (MAF) variants have higher eQTL effect sizes. A: Distribution of MAF for LCL eQTL (GTEx v7, 10\% FDR). B: LCL eQTL absolute effect size (slope of the linear regression) vs minor allele frequency (MAF).}
     \label{fig:c1_fs11}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig_s12.png}
-    \caption{Gene expression and chromatin QTL effect size differences in regulatory annotations suggest regulatory buffering. A: Distribution of eQTL effect sizes for LCL eQTL (GTEx v7, 10\% FDR) in GM12878 regulatory annotations are shown. Nominal P values $<$ 0.05 are shown. B: Power to detect eQTL after Bonferroni correction at effect sizes corresponding the 10th through 90th percentiles observed for each annotation (shown in A). Other constant parameters for the power calculation are shown in box.
+    \caption[Gene expression and chromatin QTL effect size differences in regulatory annotations suggest regulatory buffering]{Gene expression and chromatin QTL effect size differences in regulatory annotations suggest regulatory buffering. A: Distribution of eQTL effect sizes for LCL eQTL (GTEx v7, 10\% FDR) in GM12878 regulatory annotations are shown. Nominal P values $<$ 0.05 are shown. B: Power to detect eQTL after Bonferroni correction at effect sizes corresponding the 10th through 90th percentiles observed for each annotation (shown in A). Other constant parameters for the power calculation are shown in box.
 }
     \label{fig:c1_fs12}
 \end{figure}
@@ -157,15 +157,15 @@ Among other mechanisms, eQTL SNPs can influence gene expression in vivo by modul
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig5.pdf}
-    \caption{Gene expression and chromatin QTL effect size differences in regulatory annotations suggest regulatory buffering. A: Distribution of eQTL effect sizes for blood eQTL (GTEx v7, 10\% FDR) in K562 regulatory annotations. B: Power to detect eQTL after Bonferroni correction at effect sizes corresponding the 10th through 90th observed for each annotation (shown in A). Other constant parameters for the power calculation are shown in box. C: Distribution of effect sizes for LCL DNase QTLs in GM12878 regulatory annotations. D: Distribution of effect sizes (deviation from expectation) for SNPs with significant allelic bias in GM12878 ATAC-seq (p $<$ 0.05, minimum coverage at SNP=30, reads down-sampled to 30, see methods) in GM12878 regulatory annotations. P values from Wilcoxon rank sum tests, after a Bonferroni correction accounting for 10 pairwise tests. Number of QTLs/allelic biased SNPs overlapping each regulatory annotation is shown in parentheses in A, C and D.}
+    \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig5.png}
+    \caption[Gene expression and chromatin QTL effect size differences in regulatory annotations suggest regulatory buffering]{Gene expression and chromatin QTL effect size differences in regulatory annotations suggest regulatory buffering. A: Distribution of eQTL effect sizes for blood eQTL (GTEx v7, 10\% FDR) in K562 regulatory annotations. B: Power to detect eQTL after Bonferroni correction at effect sizes corresponding the 10th through 90th observed for each annotation (shown in A). Other constant parameters for the power calculation are shown in box. C: Distribution of effect sizes for LCL DNase QTLs in GM12878 regulatory annotations. D: Distribution of effect sizes (deviation from expectation) for SNPs with significant allelic bias in GM12878 ATAC-seq (p $<$ 0.05, minimum coverage at SNP=30, reads down-sampled to 30, see methods) in GM12878 regulatory annotations. P values from Wilcoxon rank sum tests, after a Bonferroni correction accounting for 10 pairwise tests. Number of QTLs/allelic biased SNPs overlapping each regulatory annotation is shown in parentheses in A, C and D.}
     \label{fig:c1_f5}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{2_regulatory_elements/figures/fig_s13.png}
-    \caption{Effect sizes for Allelic Bias in GM12878 ATAC-seq after removing low MAF SNPs (consistent with eQTL and dsQTL effect size analyses). SNPs with MAF $>$ 0.2 and allelic bias p value $<$ 0.05 were included for this analysis.}
+    \caption[Effect sizes for Allelic Bias in GM12878 ATAC-seq]{Effect sizes for Allelic Bias in GM12878 ATAC-seq after removing low MAF SNPs (consistent with eQTL and dsQTL effect size analyses). SNPs with MAF $>$ 0.2 and allelic bias p value $<$ 0.05 were included for this analysis.}
     \label{fig:c1_fs13}
 \end{figure}
 
