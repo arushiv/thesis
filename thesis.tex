@@ -5,7 +5,7 @@
 
 % wrapping URLs
 \RequirePackage[hyphens]{url}
-\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}  
+\PassOptionsToPackage{hyphens}{url}\usepackage[hidelinks]{hyperref}  
 
 \usepackage[normalem]{ulem}
 
@@ -43,11 +43,11 @@
 \usepackage{enumitem}
 \newlength\myitemwidth
 
-\setlength\myitemwidth{5em} % <<< choose what you need here
+\setlength\myitemwidth{6em} % <<< choose what you need here
 \newlist{myacronymlist}{description}{1}
 \setlist[myacronymlist]{
   labelindent = 0pt ,
-  labelsep    = 0pt ,
+  labelsep    = 10pt ,
   leftmargin  = \myitemwidth ,
   labelwidth  = \myitemwidth ,
   itemindent  = 0pt ,
@@ -77,7 +77,7 @@
 \definecolor{mgreen}{rgb}{0.0, 0.6, 0.0}
 
 
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 %\hypersetup{
 %    colorlinks,
 %    citecolor=black,
@@ -184,13 +184,13 @@
 %\input{log.tex}
 %\clearpage
 %\usefont{T1}{qzc}{m}{it}
-\newcommand{\thesistitle}{Understanding the genetics of gene regulation using multi-omics profiling}
+\newcommand{\thesistitle}{Understanding the Genetics of Gene Regulation Using Multi-Omics Profiling}
 \titlepage{\thesistitle}{Arushi Varshney}{Doctor of Philosophy}
 {Human Genetics}{2019}
-{Assistant Professor Stephen C. J. Parker, Chair\\
+{Associate Professor Stephen C. J. Parker, Chair\\
  Professor Sally A. Camper\\
  Assistant Professor Jacob Kitzman\\
- Associate Professor Mats Ljungman\\
+ Professor Mats Ljungman\\
  Associate Professor Cristen J. Willer\\
  }
 % Begin the front matter as required by Rackham dissertation guidelines
@@ -214,8 +214,8 @@
 
 % Optional Acknowledgements page
 \startacknowledgementspage
-%\input{acknowledgements}
-%\label{acknowledgements}
+\input{acknowledgements}
+\label{acknowledgements}
 
 % Optional Preface page
 %\startprefacepage
@@ -223,8 +223,8 @@
 %\label{Preface}
 % Table of contents, list of figures, etc.
 \tableofcontents     % Required
-\listoftables        % Required if there is more than one table
 \listoffigures       % Required if there is more than one figure
+\listoftables        % Required if there is more than one table
 %\listofmaps          % Required if there is more than one map
 % \listofappendices    % Required if there is more than one appendix
 \listofabbreviations % Optional. Abbreviations should be stored in a file named abbr.tex
@@ -248,22 +248,22 @@
 \input{1_introduction/main}
 
 
-\chapter{Cell specificity of human regulatory annotations and their genetic effects on gene expression}
+\chapter{Cell Specificity of Human Regulatory Annotations and Their Genetic Effects on Gene Rxpression}
 \label{chap:2_regulatory_elements}
 \input{2_regulatory_elements/main}
 
 
-\chapter{Understanding the genetics of gene expression in human pancreatic islets}
+\chapter{Understanding the Genetics of Gene Expression in Human Pancreatic Islets}
 \label{chap:3_islet_eqtl}
 \input{3_islet_eqtl/main}
 
 
-\chapter{Analyses of Islet eQTL and T2D GWAS along with epigenomic data to elucidate gene regulatory mechanisms}
+\chapter{Analyses of Islet eQTL and T2D GWAS Along with Epigenomic Data to Elucidate Gene Regulatory Mechanisms}
 \label{chap:4_inspire}
 \input{4_inspire/main}
 
 
-\chapter{Integrating Enhancer RNA Signatures with Diverse Omics Data to identify characteristics of transcription initiation in pancreatic islets}
+\chapter{Integrating Enhancer RNA Signatures with Diverse Omics Data to Identify Characteristics of Transcription Initiation in Pancreatic Islets}
 \label{chap:cc}
 \input{5_cage/main}
 
