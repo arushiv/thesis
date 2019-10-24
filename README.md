@@ -1,1 +1,1 @@
-## PhD Thesis: Understanding the Genetics of Gene Regulation Using Multi-Omics Profiling available [here](https://deepblue.lib.umich.edu/handle/2027.42/151691)  
+## PhD Thesis: [Understanding the Genetics of Gene Regulation Using Multi-Omics Profiling](https://deepblue.lib.umich.edu/handle/2027.42/151691)  
